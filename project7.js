@@ -7,24 +7,25 @@ div.style.top = `${divY}px`;
 
 let drwaActive = false; 
 
-let insertDivX;
+let insertDivX; 
 let insertDivY;
 
 
 div.addEventListener('mousedown', (e) => { 
     div.style.backgroundColor = 'grey';
     drwaActive = true;
-    
-    insertDivX = e.offsetX;
+
+    insertDivX = e.offsetX; //add offset
     insertDivY = e.offsetY;
 })
 
 div.addEventListener('mousemove', (event) => {
     if (drwaActive){
-    divX = event.clientX;
-    divY = event.clientY;
-    div.style.left = divX - 50 + "px";
-    div.style.top = divY - 50 + "px";
+    
+    divX = event.clientX - insertDivX;
+    divY = event.clientY - insertDivY;
+    div.style.left = divX + "px";
+    div.style.top = divY + "px";
     }
 })
 
