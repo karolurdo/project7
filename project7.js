@@ -5,7 +5,7 @@ let divY = 50;
 div.style.left = divX+ "px"; // add position squere
 div.style.top = `${divY}px`;
 
-let drwaActive = false; 
+let drwaActive = false; // flag
 
 let insertDivX; 
 let insertDivY;
